@@ -1,16 +1,42 @@
+import { Container } from './components/Container/index';
+// import { Heading } from './components/Heading/index';
+import { Logo } from './components/Logo/index';
+import { Menu } from './components/Menu/index';
+import { CountDown } from './components/CountDown';
+
 import './styles/theme.css';
 import './styles/global.css';
-import { Heading } from './components/Heading';
 
 export function App() {
   return (
     <>
-      <Heading attr={123} attr2="string"> Olá Mundo! </Heading>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime quos dignissimos minus eligendi rerum,
-        molestias similique cumque tempore, eos laboriosam sunt tempora animi saepe possimus quod earum voluptatum ipsum
-        dicta.
-      </p>
+      <Container>
+        <Logo />
+      </Container>
+      <Container>
+        <Menu />
+      </Container>
+      <Container>
+        <CountDown />
+      </Container>
+      <Container>
+        <form action="" className="form">
+          <div className="formRow">
+            <label htmlFor="input">task</label>
+            <input type="text" id="input" />
+          </div>
+          <div className="formRow">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div className="formRow">
+            <p>Ciclos</p>
+            <p>o o o o o o o</p>
+          </div>
+          <div className="formRow">
+            <button>Enviar</button>
+          </div>
+        </form>
+      </Container>
     </>
   );
 }
